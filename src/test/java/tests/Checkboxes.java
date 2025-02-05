@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class Checkboxes {
 
     @Test
-    public void checkbox1Test(){
+    public void firstCheckboxCheckTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -25,7 +25,7 @@ public class Checkboxes {
     }
 
     @Test
-    public void checkbox2Test(){
+    public void secondCheckboxUncheckTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();

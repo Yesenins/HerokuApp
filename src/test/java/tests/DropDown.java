@@ -13,7 +13,7 @@ import java.util.List;
 public class DropDown {
 
     @Test
-    public void dropDownTest() throws InterruptedException {
+    public void UserProfileRedirectionTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -33,14 +33,10 @@ public class DropDown {
                 System.out.println("Option 2 exist");
             }
         }
-
-        Thread.sleep(800);
         dropdown.selectByValue("1");
         Assert.assertEquals(dropdown.getFirstSelectedOption().getText(), "Option 1");
-        Thread.sleep(800);
 
         dropdown.selectByValue("2");
-        Thread.sleep(800);
         Assert.assertEquals(dropdown.getFirstSelectedOption().getText(), "Option 2");
     }
 }

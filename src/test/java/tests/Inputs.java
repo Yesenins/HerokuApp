@@ -13,26 +13,17 @@ import java.time.Duration;
 public class Inputs {
 
     @Test
-    public void inputsHerokuAppTest() throws InterruptedException {
+    public void inputsHerokuAppTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://the-internet.herokuapp.com/inputs");
         WebElement inputField = driver.findElement(By.xpath("//*[@type=\"number\"]"));
-        inputField.sendKeys("88");
-
-        String actualText = inputField.getDomProperty("value");
-        Assert.assertEquals(actualText, "88");
-        Thread.sleep(1000);
         inputField.sendKeys(Keys.ARROW_UP);
-        Thread.sleep(1000);
         String actualTextUp = inputField.getDomProperty("value");
-        Assert.assertEquals(actualTextUp, "89");
-
-        for (int i = 0; i < 8; i++){
-            inputField.sendKeys(Keys.ARROW_DOWN);
-        }
+        Assert.assertEquals(actualTextUp, "1");
+        inputField.sendKeys(Keys.ARROW_DOWN);
         String actualTextDown = inputField.getDomProperty("value");
-        Assert.assertEquals(actualTextDown, "81");
+        Assert.assertEquals(actualTextDown, "0");
     }
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class NotificationMessages {
 
     @Test
-    public void notificationMessageTest(){
+    public void checkNotificationMessageTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();

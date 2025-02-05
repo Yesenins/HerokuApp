@@ -20,6 +20,5 @@ public class SortableDataTables {
         Assert.assertEquals(driver.findElement(By.xpath("//table//tr[1]//td[2]")).getText(), "John");
         Assert.assertEquals(driver.findElement(By.xpath("//table//tr[3]//td[1]")).getText(), "Doe");
         Assert.assertEquals(driver.findElement(By.xpath("//table[2]//tr[1]//td[3]")).getText(), "jsmith@gmail.com");
-
     }
 }
