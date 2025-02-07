@@ -13,7 +13,7 @@ import java.util.List;
 public class DropDown {
 
     @Test
-    public void UserProfileRedirectionTest(){
+    public void userProfileRedirectionTest(){
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
