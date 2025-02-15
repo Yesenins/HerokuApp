@@ -19,7 +19,7 @@ public class FileUpload {
         driver.findElement(INPUT_FILE_BUTTON).sendKeys(PATH_TO_THE_FILE);
         driver.findElement(UPLOAD_BUTTON).click();
 
-        Assert.assertEquals(driver.findElement(By.id("uploaded-files")).getText(),"Screenshot_3.png");
+        Assert.assertEquals(driver.findElement(By.id("uploaded-files")).getText(), "Screenshot_3.png");
         driver.quit();
     }
 }
